@@ -70,7 +70,7 @@ const DEFAULT_MEDIA_ITEMS = [
     featured: false,
     image: "images/WORK.jpg",
     tags: ["life"],
-    description: "At some point, back in 2025, during second semester of my first year at Creative Computing course, some seriously bad stuff happened. Not able to handle the situation on my premises, I was forced to leave, fleeing all the way to Leitrim. This is where I spent my time from 2025 to 2026. Very hard times, thanks to the close ones, I managed to stay alive and will probably move to Waterford soon (fingers crossed!!). Stay strong, folks, love you!"
+    description: "At some point, back in 2025, during second semester of my first year at Creative Computing course, some seriously bad stuff happened. Not able to handle the situation on my premises, I was forced to leave, fleeing all the way to Leitrim. This is where I spent my time from 2025 to 2026. I have hit my rock bottom, but thanks to the close ones, I managed to stay alive and will probably move to Waterford soon (fingers crossed!!). Stay strong, folks, love you!"
   }
 ];
 
