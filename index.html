@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>H3ADROOM | Welcome</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="container">
+  <header>
+    <div class="header-top">
+      <h1>20113262-personal-2.netlify.app</h1>
+      <span id="live-clock" class="live-clock">Loading clock...</span>
+    </div>
+    <p id="tagline">
+      <span>H3ADROOM's Lair — Hardware, Music &amp; Media Archive</span>
+      <span>Year 2 Web Dev Revision</span>
+    </p>
+  </header>
+
+  <div id="content">
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">1. Welcome (Home)</a></li>
+        <li><a href="collection.html">2. Media &amp; Tech Vault</a></li>
+        <li><a href="about.html">3. About &amp; Creator</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h2>Welcome to H3ADROOM's Personal Site</h2>
+
+      <section class="panel">
+        <p id="dynamic-greeting" class="fun" style="margin: 0;"></p>
+        <div class="hero-row">
+          <div class="hero-media">
+            <img src="images/me.jpg" alt="Dmytro Isaiev (H3ADROOM)">
+            <img src="images/albums/Antares.jpg" alt="Sybreed - Antares Album Art">
+          </div>
+          <div class="hero-text">
+            <p>Hello, I'm <span class="fun">Dmytro Isaiev</span>, also known online as <span class="fun">H3ADROOM</span> or <span class="fun">MELOCODI</span>. Welcome to the upgraded Year 2 edition of my personal website.</p>
+            <p>This platform stores and manipulates a structured JSON collection covering my core interests: <strong>industrial metal music</strong> (such as Sybreed), <strong>dystopian sci-fi cinema</strong> (like Equilibrium), and <strong>low-level hardware modifications</strong> (including my custom RTX 4060 Dell Precision M4800 workstation).</p>
+            <p>Head over to the <strong>Media &amp; Tech Vault</strong> page to inspect the full dataset, add new tracks/films/hardware builds, filter by category or tags, and remove items dynamically.</p>
+            <p id="home-stats" style="color: #00ffff; font-weight: bold;"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+          <h3 style="margin: 0;">Random Archive Spotlight</h3>
+          <button type="button" id="random-spotlight-btn" class="btn">Roll Random Entry</button>
+        </div>
+        <div id="spotlight-box" class="cards-container"></div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <span>&copy; 2026 Dmytro Isaiev (H3ADROOM) — Student ID: 20113262</span>
+    <span>Built with Semantic HTML5, CSS Flexbox &amp; Vanilla ES6+ JS</span>
+  </footer>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/welcome.js"></script>
+</body>
+</html>

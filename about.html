@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>H3ADROOM | About &amp; Creator</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="container">
+  <header>
+    <div class="header-top">
+      <h1>20113262-personal-2.netlify.app</h1>
+      <span id="live-clock" class="live-clock">Loading clock...</span>
+    </div>
+    <p id="tagline">
+      <span>H3ADROOM's Lair — Creator JSON Profile &amp; Dataset Architecture</span>
+      <span>About Page</span>
+    </p>
+  </header>
+
+  <div id="content">
+    <nav>
+      <ul>
+        <li><a href="index.html">1. Welcome (Home)</a></li>
+        <li><a href="collection.html">2. Media &amp; Tech Vault</a></li>
+        <li><a href="about.html" class="active">3. About &amp; Creator</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h2>About the Creator &amp; Website Architecture</h2>
+
+      <!-- Creator Profile rendered from JSON object -->
+      <section class="panel">
+        <h3>Creator Profile (Rendered from JSON Object)</h3>
+        <div id="creator-profile-grid" class="profile-specs"></div>
+        <h3 style="margin-top: 0.6rem;">Technical Focus &amp; Skills</h3>
+        <ul id="creator-skills-list" style="padding-left: 0.5rem; margin: 0;"></ul>
+      </section>
+
+      <!-- Hardware Milestones from Year 1 Achievements -->
+      <section class="panel">
+        <h3>Hardware Engineering Milestones</h3>
+        <table id="events">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Milestone Description</th>
+            </tr>
+          </thead>
+          <tbody id="achievements-tbody"></tbody>
+        </table>
+      </section>
+
+      <!-- Background on the JSON Data & Interactive Note -->
+      <section class="panel">
+        <h3>About the JSON Dataset &amp; Year 2 Upgrade</h3>
+        <p>Originally built in Year 1 as a static multi-page site using Fomantic UI, this Year 2 overhaul replaces heavy external UI frameworks with pure <strong>CSS Flexbox</strong> and modular <strong>Vanilla ES6+ JavaScript</strong>.</p>
+        <p>Each item in the <strong>Media &amp; Tech Vault</strong> is structured as a JavaScript object containing primitive fields (<code>id</code>, <code>title</code>, <code>creator</code>, <code>category</code>, <code>year</code>, <code>rating</code>, <code>featured</code>) alongside a nested <code>tags</code> array for multi-criteria searching.</p>
+        <p id="project-uptime" style="color: #00ffff; font-weight: bold;"></p>
+
+        <form id="feedback-form" class="form-grid" style="margin-top: 0.5rem;">
+          <div class="form-group">
+            <label for="visitor-name">Your Name / Handle</label>
+            <input type="text" id="visitor-name" placeholder="Enter your handle..." required>
+          </div>
+          <div class="form-group">
+            <label for="visitor-msg">Leave a Quick Note</label>
+            <input type="text" id="visitor-msg" placeholder="Suggest a song, movie, or hardware mod..." required>
+          </div>
+          <div class="form-group full-width">
+            <button type="submit" class="btn">Post Note</button>
+          </div>
+        </form>
+        <div id="feedback-output"></div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <span>&copy; 2026 Dmytro Isaiev (H3ADROOM) — Student ID: 20113262</span>
+    <span>JSON Creator Object &amp; DOM Event Handling</span>
+  </footer>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/about.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>H3ADROOM | Media &amp; Tech Vault</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="container">
+  <header>
+    <div class="header-top">
+      <h1>20113262-personal-2.netlify.app</h1>
+      <span id="live-clock" class="live-clock">Loading clock...</span>
+    </div>
+    <p id="tagline">
+      <span>H3ADROOM's Lair — Data Manipulation &amp; Collection Manager</span>
+      <span>Array of Objects</span>
+    </p>
+  </header>
+
+  <div id="content">
+    <nav>
+      <ul>
+        <li><a href="index.html">1. Welcome (Home)</a></li>
+        <li><a href="collection.html" class="active">2. Media &amp; Tech Vault</a></li>
+        <li><a href="about.html">3. About &amp; Creator</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h2>Media, Music &amp; Hardware Vault (Data Manipulation)</h2>
+
+      <!-- search & filter section -->
+      <section class="panel">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+          <h3 style="margin: 0;">Search &amp; Filter Archive</h3>
+          <button type="button" id="reset-data-btn" class="btn btn-secondary">Reset Default Data</button>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="search-input">Search by Title, Artist, or Tag</label>
+            <input type="text" id="search-input" placeholder="e.g., Sybreed, RTX 4060, dystopian...">
+          </div>
+
+          <div class="form-group">
+            <label for="category-filter">Filter by Category</label>
+            <select id="category-filter">
+              <option value="ALL">All Categories</option>
+              <option value="Music">Music</option>
+              <option value="Movie">Movie</option>
+              <option value="Hardware Mod">Hardware Mod</option>
+			  <option value="IRL">IRL</option>
+            </select>
+          </div>
+
+          <div class="form-group" style="justify-content: flex-end;">
+            <div class="checkbox-row">
+              <label>
+                <input type="checkbox" id="featured-only">
+                Show Featured Favorites Only
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div id="collection-stats" class="stats-bar"></div>
+      </section>
+
+      <!-- rendered cards container -->
+      <section id="cards-container" class="cards-container"></section>
+
+      <!-- add new object form -->
+      <section class="panel">
+        <h3>Add New Entry to Vault</h3>
+        <form id="add-item-form" class="form-grid">
+          <div class="form-group">
+            <label for="item-title">Title *</label>
+            <input type="text" id="item-title" placeholder="e.g., My cool story" required>
+          </div>
+
+          <div class="form-group">
+            <label for="item-creator">Creator *</label>
+            <input type="text" id="item-creator" placeholder="e.g., Name / Nickname" required>
+          </div>
+
+          <div class="form-group">
+            <label for="item-category">Category</label>
+            <select id="item-category">
+              <option value="Music">Music</option>
+              <option value="Movie">Movie</option>
+              <option value="Hardware Mod">Hardware Mod</option>
+			  <option value="IRL">IRL</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="item-year">Release / Build Year</label>
+            <input type="number" id="item-year" min="1970" max="2030" value="2026">
+          </div>
+
+          <div class="form-group">
+            <label for="item-image">Artwork / Photo Preset</label>
+            <select id="item-image">
+              <option value="images/albums/Antares.jpg">Album Cover (Antares)</option>
+              <option value="images/movies/equilibrium.jpg">Movie Poster (Equilibrium)</option>
+              <option value="images/tech/INSIDE_OF_THE_LAPTOP.jpg">Laptop Internals (M4800)</option>
+              <option value="images/tech/BIOS_CHIPS.jpg">SPI BIOS Chips</option>
+              <option value="images/tech/QUADRO_T1000_GPU.jpg">MXM GPU Module</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="item-tags">Tags (comma-separated array)</label>
+            <input type="text" id="item-tags" placeholder="e.g., metal, cyberpunk, mxm">
+          </div>
+
+          <div class="form-group">
+            <label>Rating (1 to 5 Stars)</label>
+            <div class="radio-row">
+              <label><input type="radio" name="item-rating" value="3"> 3 ★</label>
+              <label><input type="radio" name="item-rating" value="4"> 4 ★</label>
+              <label><input type="radio" name="item-rating" value="5" checked> 5 ★</label>
+            </div>
+          </div>
+
+          <div class="form-group" style="justify-content: flex-end;">
+            <div class="checkbox-row">
+              <label>
+                <input type="checkbox" id="item-featured">
+                Mark as Featured Favorite
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="item-desc">Description / Notes</label>
+            <input type="text" id="item-desc" placeholder="Short summary of the song, film, or hardware mod...">
+          </div>
+
+          <div class="form-group full-width">
+            <button type="submit" class="btn">Add Object to Collection</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <span>&copy; 2026 Dmytro Isaiev (H3ADROOM) — Student ID: 20113262</span>
+    <span>Data persisted via LocalStorage &amp; ES6 Array Methods</span>
+  </footer>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/collection.js"></script>
+</body>
+</html>
